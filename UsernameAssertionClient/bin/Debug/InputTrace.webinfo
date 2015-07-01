@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<log>
+  <inputMessage utc="01/07/2015 12:30:23 a.m." messageId="urn:uuid:8136c3a5-e7ba-47ae-8e4e-31f6268d9581">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header>
+          <wsa:Action>http://company.com/samples/wse/CheckAccountStatusResponse</wsa:Action>
+          <wsa:MessageID>urn:uuid:8136c3a5-e7ba-47ae-8e4e-31f6268d9581</wsa:MessageID>
+          <wsa:RelatesTo>urn:uuid:15b4f863-8731-4245-a88e-a0c2e0062cab</wsa:RelatesTo>
+          <wsa:To>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:To>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header />
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </inputMessage>
+  <inputMessage utc="01/07/2015 12:31:21 a.m." messageId="urn:uuid:d96c14de-f1fe-4df1-86a8-504f160b221c">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header>
+          <wsa:Action>http://company.com/samples/wse/CheckAccountStatusResponse</wsa:Action>
+          <wsa:MessageID>urn:uuid:d96c14de-f1fe-4df1-86a8-504f160b221c</wsa:MessageID>
+          <wsa:RelatesTo>urn:uuid:b8af22db-499e-487c-b735-0de57885e21f</wsa:RelatesTo>
+          <wsa:To>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:To>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header />
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </inputMessage>
+  <inputMessage utc="01/07/2015 01:09:28 a.m." messageId="urn:uuid:855c34f5-d036-4f62-8835-7c162cf47f7c">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header>
+          <wsa:Action>http://company.com/samples/wse/CheckAccountStatusResponse</wsa:Action>
+          <wsa:MessageID>urn:uuid:855c34f5-d036-4f62-8835-7c162cf47f7c</wsa:MessageID>
+          <wsa:RelatesTo>urn:uuid:a07accf0-7371-479e-b471-a19b6d829765</wsa:RelatesTo>
+          <wsa:To>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:To>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header />
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </inputMessage>
+  <inputMessage utc="01/07/2015 01:11:02 a.m." messageId="urn:uuid:cbb4f37f-682e-4ca8-8ca4-9d0d6400a280">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header>
+          <wsa:Action>http://company.com/samples/wse/CheckAccountStatusResponse</wsa:Action>
+          <wsa:MessageID>urn:uuid:cbb4f37f-682e-4ca8-8ca4-9d0d6400a280</wsa:MessageID>
+          <wsa:RelatesTo>urn:uuid:4c156e2a-acdf-49f3-892e-8a5dfa94bc17</wsa:RelatesTo>
+          <wsa:To>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:To>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header />
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </inputMessage>
+  <inputMessage utc="01/07/2015 01:18:26 a.m." messageId="urn:uuid:9efe4730-8823-4fd4-9781-eecfd7d36679">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header>
+          <wsa:Action>http://company.com/samples/wse/CheckAccountStatusResponse</wsa:Action>
+          <wsa:MessageID>urn:uuid:9efe4730-8823-4fd4-9781-eecfd7d36679</wsa:MessageID>
+          <wsa:RelatesTo>urn:uuid:0e892881-d671-4dfd-bf28-8f23564217e9</wsa:RelatesTo>
+          <wsa:To>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:To>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header />
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </inputMessage>
+  <inputMessage utc="01/07/2015 01:20:55 a.m." messageId="urn:uuid:4512e26e-5944-493b-ac2e-6a3a86846585">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header>
+          <wsa:Action>http://company.com/samples/wse/CheckAccountStatusResponse</wsa:Action>
+          <wsa:MessageID>urn:uuid:4512e26e-5944-493b-ac2e-6a3a86846585</wsa:MessageID>
+          <wsa:RelatesTo>urn:uuid:7041e034-5735-43e9-967e-01525b9bd455</wsa:RelatesTo>
+          <wsa:To>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:To>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>false</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header />
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>false</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </inputMessage>
+  <inputMessage utc="01/07/2015 01:21:26 a.m." messageId="urn:uuid:4590ff9e-7fcf-49f0-8b07-6456b2a2e9b6">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header>
+          <wsa:Action>http://company.com/samples/wse/CheckAccountStatusResponse</wsa:Action>
+          <wsa:MessageID>urn:uuid:4590ff9e-7fcf-49f0-8b07-6456b2a2e9b6</wsa:MessageID>
+          <wsa:RelatesTo>urn:uuid:980d4f6c-c630-41ce-8e39-00f477f9d780</wsa:RelatesTo>
+          <wsa:To>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:To>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+        <soap:Header />
+        <soap:Body>
+          <CheckAccountStatusResponse xmlns="http://company.com/samples/wse/">
+            <CheckAccountStatusResult>true</CheckAccountStatusResult>
+          </CheckAccountStatusResponse>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </inputMessage>
+</log>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="WSUsernameAssertion">
+</Property><Property Name="Solution File" Value="C:\WSE30UsernameAssertion_src\WSUsernameAssertion.sln">
+</Property><Property Name="Date" Value="martes, 30 de junio de 2015">
+</Property><Property Name="Time" Value="19:23 p.m.">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="WSUsernameAssertion.sln" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\WSUsernameAssertion.sln">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionLibrary" Source="UsernameAssertionLibrary\UsernameAssertionLibrary.csproj" Description="Project file successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionLibrary\UsernameAssertionLibrary.csproj">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionLibrary" Source="UsernameAssertionLibrary\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionLibrary\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionLibrary" Source="UsernameAssertionLibrary\SecureSoapHeader.cs" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionLibrary\SecureSoapHeader.cs">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionLibrary" Source="UsernameAssertionLibrary\ServiceUsernameTokenManager.cs" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionLibrary\ServiceUsernameTokenManager.cs">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionLibrary" Source="UsernameAssertionLibrary\UsernameClientAssertion.cs" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionLibrary\UsernameClientAssertion.cs">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionLibrary" Source="UsernameAssertionLibrary\UsernameServiceAssertion.cs" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionLibrary\UsernameServiceAssertion.cs">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionLibrary" Source="UsernameAssertionLibrary\UsernameAssertionLibrary.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="UsernameAssertionLibrary" Source="UsernameAssertionLibrary\UsernameAssertionLibrary.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\UsernameAssertionClient.csproj" Description="Project file successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\UsernameAssertionClient.csproj">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\UsernameAssertionClient.csproj.user" Description="Project user file successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\UsernameAssertionClient.csproj.user">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\Program.cs" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\Program.cs">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\Web References\WseSample\Reference.cs" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\Web References\WseSample\Reference.cs">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\Web References\WseSample\Service.wsdl" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\Web References\WseSample\Service.wsdl">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\app.config" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\app.config">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\Properties\Settings.settings" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\Web References\WseSample\Reference.map" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\Web References\WseSample\Reference.map">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\Web References\WseSample\Service.disco" Description="File successfully backed up as C:\WSE30UsernameAssertion_src\Backup\UsernameAssertionClient\Web References\WseSample\Service.disco">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\UsernameAssertionClient.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="UsernameAssertionClient" Source="UsernameAssertionClient\UsernameAssertionClient.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="WSUsernameAssertion.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="WSUsernameAssertion.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionLibrary" Source="UsernameAssertionLibrary\UsernameAssertionLibrary.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="UsernameAssertionClient" Source="UsernameAssertionClient\UsernameAssertionClient.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

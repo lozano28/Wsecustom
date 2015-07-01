@@ -1,0 +1,8 @@
+C:\WSE30UsernameAssertion_src\UsernameAssertionClient\obj\Debug\ResolveAssemblyReference.cache
+C:\WSE30UsernameAssertion_src\UsernameAssertionClient\bin\Debug\UsernameAssertionClient.exe.config
+C:\WSE30UsernameAssertion_src\UsernameAssertionClient\bin\Debug\UsernameAssertionClient.exe
+C:\WSE30UsernameAssertion_src\UsernameAssertionClient\bin\Debug\UsernameAssertionClient.pdb
+C:\WSE30UsernameAssertion_src\UsernameAssertionClient\bin\Debug\UsernameAssertionLibrary.dll
+C:\WSE30UsernameAssertion_src\UsernameAssertionClient\bin\Debug\UsernameAssertionLibrary.pdb
+C:\WSE30UsernameAssertion_src\UsernameAssertionClient\obj\Debug\UsernameAssertionClient.exe
+C:\WSE30UsernameAssertion_src\UsernameAssertionClient\obj\Debug\UsernameAssertionClient.pdb

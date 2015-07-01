@@ -1,0 +1,1003 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<log>
+  <outputMessage utc="01/07/2015 12:30:22 a.m." messageId="urn:uuid:15b4f863-8731-4245-a88e-a0c2e0062cab">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/">
+            <PinCode>1111</PinCode>
+          </BankAccountSettings>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatus xmlns="http://company.com/samples/wse/">
+            <accountNumber>123456</accountNumber>
+          </CheckAccountStatus>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Entering SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Exited SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/" wsu:Id="af06f8a3-abac-41e9-ab43-76d7406f778f">
+            <xenc:EncryptedData Id="Enc-c3efb1aa-fbeb-4d4e-a617-29990ebe0cc3" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-7296854e-e89d-4700-bfe4-38c8437f3465" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+              <xenc:CipherData>
+                <xenc:CipherValue>O8LhrcNzUhU+rL+wRSWme73cB0N2qg4KwfcJEFvscVRxw+RSN+B5iYCbcOpVqIXBv1xWh4p3T9ElwDbFwpzoK78TPy/8M+UUD1bl7F9h1W0=</xenc:CipherValue>
+              </xenc:CipherData>
+            </xenc:EncryptedData>
+          </BankAccountSettings>
+          <wsa:Action wsu:Id="Id-b8c1ffea-4ac9-4543-b23c-f4ba405a49f1">http://company.com/samples/wse/CheckAccountStatus</wsa:Action>
+          <wsa:MessageID wsu:Id="Id-9b1ff88f-48d8-4afe-a32d-4bee1488a97b">urn:uuid:15b4f863-8731-4245-a88e-a0c2e0062cab</wsa:MessageID>
+          <wsa:ReplyTo wsu:Id="Id-41fdc028-e24d-4026-bb4d-71cbe3c6bb92">
+            <wsa:Address>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:Address>
+          </wsa:ReplyTo>
+          <wsa:To wsu:Id="Id-198d7e19-08a8-4aad-974b-71150f3e4a63">http://localhost:2045/UsernameAssertionService/Service.asmx</wsa:To>
+          <wsse:Security soap:mustUnderstand="1">
+            <wsu:Timestamp wsu:Id="Timestamp-99d1486e-137f-4178-96c6-38b34c426c6b">
+              <wsu:Created>2015-07-01T00:30:22Z</wsu:Created>
+              <wsu:Expires>2015-07-01T00:35:22Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-7296854e-e89d-4700-bfe4-38c8437f3465">
+              <wsse:Username>admin</wsse:Username>
+              <wsse:Nonce>HL6j1AEpn6xY9UFISh5PpA==</wsse:Nonce>
+              <wsu:Created>2015-07-01T00:30:22Z</wsu:Created>
+            </wsse:UsernameToken>
+            <xenc:ReferenceList xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:DataReference URI="#Enc-c3efb1aa-fbeb-4d4e-a617-29990ebe0cc3" />
+              <xenc:DataReference URI="#Enc-94e0f160-c6dc-42df-8e8d-c39b2c8098ea" />
+            </xenc:ReferenceList>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" />
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1" />
+                <Reference URI="#Id-b8c1ffea-4ac9-4543-b23c-f4ba405a49f1">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>TQFQ0aztQQ5XylGO7DVZTgO+Ko8=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-9b1ff88f-48d8-4afe-a32d-4bee1488a97b">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>yB5//u1iHqn40MrVReLnSI7qbk8=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-41fdc028-e24d-4026-bb4d-71cbe3c6bb92">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>ZrQd2l7Lv7T11krosoV6X7Mjv18=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-198d7e19-08a8-4aad-974b-71150f3e4a63">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>YVQXDYOpRv+2MSop8HPeAKP5QBo=</DigestValue>
+                </Reference>
+                <Reference URI="#Timestamp-99d1486e-137f-4178-96c6-38b34c426c6b">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>z1OSkTag5NI69EzCmJFp/t9J1R8=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-1623076c-e0db-447b-aa75-a9f032145d1c">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>D/iYk5lCiDi8gPS1nnIbGGOhLe8=</DigestValue>
+                </Reference>
+              </SignedInfo>
+              <SignatureValue>z7F6qGvHuGODc9+qn9V/YBTI/QI=</SignatureValue>
+              <KeyInfo>
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-7296854e-e89d-4700-bfe4-38c8437f3465" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+            </Signature>
+          </wsse:Security>
+        </soap:Header>
+        <soap:Body wsu:Id="Id-1623076c-e0db-447b-aa75-a9f032145d1c">
+          <xenc:EncryptedData Id="Enc-94e0f160-c6dc-42df-8e8d-c39b2c8098ea" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+            <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <wsse:SecurityTokenReference>
+                <wsse:Reference URI="#SecurityToken-7296854e-e89d-4700-bfe4-38c8437f3465" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+              </wsse:SecurityTokenReference>
+            </KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>LdtkUQLXPVBCOup8sK539cDJshUzeEVooTfKRDSjdMT4jl0kJz6CXpUSPs71RfHmfHew90x86eCWFyd14N81kqmvLf3VcehBpisS1h+NrZ5zR6uWuaPuQYF+PMOjgb5EQyy0/2Ehn79RRUkPkAqojD+O0bs8h5Vlz11ltJH866o4dbKQze9uKjcH7uo1oZ4E</xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </outputMessage>
+  <outputMessage utc="01/07/2015 12:31:21 a.m." messageId="urn:uuid:b8af22db-499e-487c-b735-0de57885e21f">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/">
+            <PinCode>1111</PinCode>
+          </BankAccountSettings>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatus xmlns="http://company.com/samples/wse/">
+            <accountNumber>123456</accountNumber>
+          </CheckAccountStatus>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Entering SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Exited SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/" wsu:Id="77bac506-f6b4-4199-8e40-2068391d5628">
+            <xenc:EncryptedData Id="Enc-0b59a219-1e55-4e5c-9cbd-53b82a1245d5" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-ea0b61d4-c561-4873-a1b7-c2286f8638d2" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+              <xenc:CipherData>
+                <xenc:CipherValue>im1DdeMKF4f3rxYLPCQb4r5EqECy25KYKxVL2sVX10jhV2LRhqNFM61fjYkTyicbEGqxmyeFQdsdH5s4XwS3ogLSiZvoI9JYxfyuhCMorpU=</xenc:CipherValue>
+              </xenc:CipherData>
+            </xenc:EncryptedData>
+          </BankAccountSettings>
+          <wsa:Action wsu:Id="Id-0ccf2f0c-1b6c-4b59-9298-f75954c3e891">http://company.com/samples/wse/CheckAccountStatus</wsa:Action>
+          <wsa:MessageID wsu:Id="Id-f5fea83b-22aa-4770-8a42-5d4db4c3c119">urn:uuid:b8af22db-499e-487c-b735-0de57885e21f</wsa:MessageID>
+          <wsa:ReplyTo wsu:Id="Id-a7e32833-5aa1-42aa-8c15-afe72c3ee62e">
+            <wsa:Address>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:Address>
+          </wsa:ReplyTo>
+          <wsa:To wsu:Id="Id-fce283d5-1a1f-4758-8b50-f0a753b2d042">http://localhost:2045/UsernameAssertionService/Service.asmx</wsa:To>
+          <wsse:Security soap:mustUnderstand="1">
+            <wsu:Timestamp wsu:Id="Timestamp-1953da64-8bfc-485a-9fcb-72ca240b58e2">
+              <wsu:Created>2015-07-01T00:31:21Z</wsu:Created>
+              <wsu:Expires>2015-07-01T00:36:21Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-ea0b61d4-c561-4873-a1b7-c2286f8638d2">
+              <wsse:Username>admin</wsse:Username>
+              <wsse:Nonce>LGPeQfBddC+5926G9qbdWA==</wsse:Nonce>
+              <wsu:Created>2015-07-01T00:31:21Z</wsu:Created>
+            </wsse:UsernameToken>
+            <xenc:ReferenceList xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:DataReference URI="#Enc-0b59a219-1e55-4e5c-9cbd-53b82a1245d5" />
+              <xenc:DataReference URI="#Enc-0ab7938c-649a-4aaf-9682-8b6dd93e61a7" />
+            </xenc:ReferenceList>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" />
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1" />
+                <Reference URI="#Id-0ccf2f0c-1b6c-4b59-9298-f75954c3e891">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>cvtyM21JvxyDvtb4570LEpAkhPE=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-f5fea83b-22aa-4770-8a42-5d4db4c3c119">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>zRzi+krgtvn4RRupFq60qxZNS7U=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-a7e32833-5aa1-42aa-8c15-afe72c3ee62e">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>jQ2nk1ojwd+RsoPd5ffa4w1vJeQ=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-fce283d5-1a1f-4758-8b50-f0a753b2d042">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>5iW4sU2CdARDNfwoKMtlGhWqNpw=</DigestValue>
+                </Reference>
+                <Reference URI="#Timestamp-1953da64-8bfc-485a-9fcb-72ca240b58e2">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>B8Sa11yPZAsB/pRwZnsUk1btrmg=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-52e9939b-8468-4cdd-8078-c1a524e812cd">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>yOfITypQWWaAN3s/rExLodSp1Ro=</DigestValue>
+                </Reference>
+              </SignedInfo>
+              <SignatureValue>kRSgw9oeEMS8N4VEwbYhKpES9xc=</SignatureValue>
+              <KeyInfo>
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-ea0b61d4-c561-4873-a1b7-c2286f8638d2" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+            </Signature>
+          </wsse:Security>
+        </soap:Header>
+        <soap:Body wsu:Id="Id-52e9939b-8468-4cdd-8078-c1a524e812cd">
+          <xenc:EncryptedData Id="Enc-0ab7938c-649a-4aaf-9682-8b6dd93e61a7" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+            <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <wsse:SecurityTokenReference>
+                <wsse:Reference URI="#SecurityToken-ea0b61d4-c561-4873-a1b7-c2286f8638d2" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+              </wsse:SecurityTokenReference>
+            </KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>dnRRUkIBdI1GdpnHO72X19G7gIGjpwzJkuS8Id/HuMxSYoPskZunQIIcXa/Uu+Jz+N0Jva63OG9cMZqBz/crQxa3GuClutPl1XzpbzFOx5qXRAbw7MmM5qf64LUG6COmDsBMIot1yrn/rnSxy9rrzBhC0nMN3tnbDs+5bnj+KphloFbddd4COjFIwX3qaJFb</xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </outputMessage>
+  <outputMessage utc="01/07/2015 01:09:04 a.m." messageId="urn:uuid:b0fe282d-a1c9-4d98-9564-a2d3c32312fb">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/">
+            <PinCode>1111</PinCode>
+          </BankAccountSettings>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatus xmlns="http://company.com/samples/wse/">
+            <accountNumber>123456</accountNumber>
+          </CheckAccountStatus>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Entering SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Exited SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/" wsu:Id="f16a719b-4c0f-4c48-b523-adb8a1b491f5">
+            <xenc:EncryptedData Id="Enc-53560bfa-8858-46bf-b3fa-5640ee40cf68" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-416c3b37-379c-4dc9-bd6e-2c297ff12f9a" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+              <xenc:CipherData>
+                <xenc:CipherValue>FHo8xULmEtqo1kRbUwFF++T+KTOk7laJmLAcGqFurZBdZ2lRBIMPyqKxRtE8Fn9OEUb7loLxFpnQAhEjnnRwUL4U8Xolacu2nzwWQytxvnM=</xenc:CipherValue>
+              </xenc:CipherData>
+            </xenc:EncryptedData>
+          </BankAccountSettings>
+          <wsa:Action wsu:Id="Id-fbba2d7e-cb1a-4eab-97e2-4d5d022428b7">http://company.com/samples/wse/CheckAccountStatus</wsa:Action>
+          <wsa:MessageID wsu:Id="Id-6d107846-f6cd-4290-8709-acf363b884bf">urn:uuid:b0fe282d-a1c9-4d98-9564-a2d3c32312fb</wsa:MessageID>
+          <wsa:ReplyTo wsu:Id="Id-1a6486f6-c5ee-44dd-b646-3c0dfdd18178">
+            <wsa:Address>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:Address>
+          </wsa:ReplyTo>
+          <wsa:To wsu:Id="Id-c16da6ef-17e6-480b-a66e-c0e3c0a31e33">http://localhost:2045/UsernameAssertionService/Service.asmx</wsa:To>
+          <wsse:Security soap:mustUnderstand="1">
+            <wsu:Timestamp wsu:Id="Timestamp-6c0134d6-1b94-41ab-85ee-d25c8eb53e02">
+              <wsu:Created>2015-07-01T01:09:04Z</wsu:Created>
+              <wsu:Expires>2015-07-01T01:14:04Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-416c3b37-379c-4dc9-bd6e-2c297ff12f9a">
+              <wsse:Username>admin</wsse:Username>
+              <wsse:Nonce>AEa3S9ImaKJJ7YPn6Z5BJg==</wsse:Nonce>
+              <wsu:Created>2015-07-01T01:09:04Z</wsu:Created>
+            </wsse:UsernameToken>
+            <xenc:ReferenceList xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:DataReference URI="#Enc-53560bfa-8858-46bf-b3fa-5640ee40cf68" />
+              <xenc:DataReference URI="#Enc-5b936734-4db5-4ed6-861a-aa285be99e2e" />
+            </xenc:ReferenceList>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" />
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1" />
+                <Reference URI="#Id-fbba2d7e-cb1a-4eab-97e2-4d5d022428b7">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>M6ZyHbT6HX4xHiLy5WmR4IRmNgk=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-6d107846-f6cd-4290-8709-acf363b884bf">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>yva9nzgeKrVprHunVZnYd/lukBM=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-1a6486f6-c5ee-44dd-b646-3c0dfdd18178">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>dm4R7c6Z5H4MEtpeMh11l4WVY30=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-c16da6ef-17e6-480b-a66e-c0e3c0a31e33">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>9Vhnf2mw6sslbHoDcJ5vo97d8Mk=</DigestValue>
+                </Reference>
+                <Reference URI="#Timestamp-6c0134d6-1b94-41ab-85ee-d25c8eb53e02">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>5fw8MwAYMVLzBTeU7DDNVTxrhJA=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-da4bc39b-a645-44cc-8454-2ddbe5b6472c">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>gM/Jblf3yIAejSRzfYhb1me3kYM=</DigestValue>
+                </Reference>
+              </SignedInfo>
+              <SignatureValue>obKbavGAmqAMC00byEd+5/5M5o8=</SignatureValue>
+              <KeyInfo>
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-416c3b37-379c-4dc9-bd6e-2c297ff12f9a" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+            </Signature>
+          </wsse:Security>
+        </soap:Header>
+        <soap:Body wsu:Id="Id-da4bc39b-a645-44cc-8454-2ddbe5b6472c">
+          <xenc:EncryptedData Id="Enc-5b936734-4db5-4ed6-861a-aa285be99e2e" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+            <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <wsse:SecurityTokenReference>
+                <wsse:Reference URI="#SecurityToken-416c3b37-379c-4dc9-bd6e-2c297ff12f9a" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+              </wsse:SecurityTokenReference>
+            </KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>9+V91ln+9F7emHfjn+VzHgNZfWwFpjolGqLlNvgYOt1QGH1nPsZxSoszuYaIxbb/o2P4GFGSc+K/WEfHHwEQ0V0HsrCjDRV26sdG1sFEbOz6Bxe7EBWZy8lKFdG+GzcLlyqGePJMvRe/748LknTWLPY0TuK9RZm0TXmXwtEIxpXoYIb/Do2I1UkQRGIKdwJG</xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </outputMessage>
+  <outputMessage utc="01/07/2015 01:09:28 a.m." messageId="urn:uuid:a07accf0-7371-479e-b471-a19b6d829765">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/">
+            <PinCode>1111</PinCode>
+          </BankAccountSettings>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatus xmlns="http://company.com/samples/wse/">
+            <accountNumber>123456</accountNumber>
+          </CheckAccountStatus>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Entering SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Exited SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/" wsu:Id="0f468246-d752-420a-97dd-129aa826de7d">
+            <xenc:EncryptedData Id="Enc-a2a98418-3b1d-4741-9243-0fee9ab629da" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-09699217-5bbf-4f83-919d-1c249cf2b8dd" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+              <xenc:CipherData>
+                <xenc:CipherValue>DIRl/Dvg5c+kb632ejQk+OAQar3EZhOC8OXxb4VNTNl1Jl0i6EzNF1CdhRQCjBDZZbtGFGcWoyxVtklL9+SocP+hZzzzk8mTAlpbzYckVlQ=</xenc:CipherValue>
+              </xenc:CipherData>
+            </xenc:EncryptedData>
+          </BankAccountSettings>
+          <wsa:Action wsu:Id="Id-ff047651-09e7-4c55-ac1d-89ca344bcfb2">http://company.com/samples/wse/CheckAccountStatus</wsa:Action>
+          <wsa:MessageID wsu:Id="Id-6ba48e84-8058-44ff-a80e-115243a79463">urn:uuid:a07accf0-7371-479e-b471-a19b6d829765</wsa:MessageID>
+          <wsa:ReplyTo wsu:Id="Id-11dbdc8d-027e-46e4-b3e2-37b4bc5d344c">
+            <wsa:Address>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:Address>
+          </wsa:ReplyTo>
+          <wsa:To wsu:Id="Id-2ba18859-a974-4ee3-a94b-bf899b2093d9">http://localhost:2045/UsernameAssertionService/Service.asmx</wsa:To>
+          <wsse:Security soap:mustUnderstand="1">
+            <wsu:Timestamp wsu:Id="Timestamp-0a692f1b-f7fe-4ab4-9390-8b3378c1ffed">
+              <wsu:Created>2015-07-01T01:09:28Z</wsu:Created>
+              <wsu:Expires>2015-07-01T01:14:28Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-09699217-5bbf-4f83-919d-1c249cf2b8dd">
+              <wsse:Username>admin</wsse:Username>
+              <wsse:Nonce>ewwIe/tet7UtNgfRDXmNeA==</wsse:Nonce>
+              <wsu:Created>2015-07-01T01:09:28Z</wsu:Created>
+            </wsse:UsernameToken>
+            <xenc:ReferenceList xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:DataReference URI="#Enc-a2a98418-3b1d-4741-9243-0fee9ab629da" />
+              <xenc:DataReference URI="#Enc-efbb05a8-9137-4aa8-82dd-6c07c8660dfa" />
+            </xenc:ReferenceList>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" />
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1" />
+                <Reference URI="#Id-ff047651-09e7-4c55-ac1d-89ca344bcfb2">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>38lC0MlXqAwyuyT2uKZqO8AX/P8=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-6ba48e84-8058-44ff-a80e-115243a79463">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>A3+0e/BExTgFx1n1MyFJn24s/Bs=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-11dbdc8d-027e-46e4-b3e2-37b4bc5d344c">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>AOu7r8/5wAUUgoxq0sVopRQv7uw=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-2ba18859-a974-4ee3-a94b-bf899b2093d9">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>XIJw6xCpRWxfHtjJRPm8W6+sOoE=</DigestValue>
+                </Reference>
+                <Reference URI="#Timestamp-0a692f1b-f7fe-4ab4-9390-8b3378c1ffed">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>J/o4GK02rwW5DAaErpdPHktJQs4=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-b0b0296d-8e2d-4c09-bedd-fe0ad9849a43">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>G3tLTNb/PivK0+Ngy5jbkq5Ek04=</DigestValue>
+                </Reference>
+              </SignedInfo>
+              <SignatureValue>PlgPaEh/qNGJq/Al9wLEgb0m4xQ=</SignatureValue>
+              <KeyInfo>
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-09699217-5bbf-4f83-919d-1c249cf2b8dd" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+            </Signature>
+          </wsse:Security>
+        </soap:Header>
+        <soap:Body wsu:Id="Id-b0b0296d-8e2d-4c09-bedd-fe0ad9849a43">
+          <xenc:EncryptedData Id="Enc-efbb05a8-9137-4aa8-82dd-6c07c8660dfa" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+            <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <wsse:SecurityTokenReference>
+                <wsse:Reference URI="#SecurityToken-09699217-5bbf-4f83-919d-1c249cf2b8dd" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+              </wsse:SecurityTokenReference>
+            </KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>GYjrQFe/WU1umM8pDHk0zZku96Fse1TY3KlP2gVEt0/ZPoBL3gZSaWWlU4FtvpZmfoajh46rQxVAQe3Vu4ftfFhHgwsx5/UYDCYKNA87zUYNaS87rU64d5n3NHxZ8f0svHNlJoxiSA0TCPFQYLhZKEjboaVUxp2MhwnU0G3WZ2mSigpMHl4/BJpFXrZaXvIb</xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </outputMessage>
+  <outputMessage utc="01/07/2015 01:11:02 a.m." messageId="urn:uuid:4c156e2a-acdf-49f3-892e-8a5dfa94bc17">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/">
+            <PinCode>1111</PinCode>
+          </BankAccountSettings>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatus xmlns="http://company.com/samples/wse/">
+            <accountNumber>123456</accountNumber>
+          </CheckAccountStatus>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Entering SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Exited SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/" wsu:Id="3807d6f7-e083-4b72-818a-45b065a01a76">
+            <xenc:EncryptedData Id="Enc-2dbee3e6-e77b-4c0f-9e4a-9fbfded9830d" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-c7acf5a7-a7df-4939-969a-9bd800c63dda" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+              <xenc:CipherData>
+                <xenc:CipherValue>FJYkHS4MSa4Gmel61SyjN70lYKa4rjS4tHgRVXfWg+PU2eAAxTD+SmUu3EfzBKllglGs14TncToh6pXlKGlhYnt8HYCYkC8/pvLAXC/p79E=</xenc:CipherValue>
+              </xenc:CipherData>
+            </xenc:EncryptedData>
+          </BankAccountSettings>
+          <wsa:Action wsu:Id="Id-14995946-f137-4c3a-be99-e75a569e9522">http://company.com/samples/wse/CheckAccountStatus</wsa:Action>
+          <wsa:MessageID wsu:Id="Id-fc2c29b6-bfb4-442c-aa49-328dd35fd1ad">urn:uuid:4c156e2a-acdf-49f3-892e-8a5dfa94bc17</wsa:MessageID>
+          <wsa:ReplyTo wsu:Id="Id-730e4f19-16c6-4437-b5e5-8f4d980ba902">
+            <wsa:Address>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:Address>
+          </wsa:ReplyTo>
+          <wsa:To wsu:Id="Id-80597b6c-71dd-4de0-a9f1-36af7d0b6f95">http://localhost:2045/UsernameAssertionService/Service.asmx</wsa:To>
+          <wsse:Security soap:mustUnderstand="1">
+            <wsu:Timestamp wsu:Id="Timestamp-003122c5-3afc-4079-8ca6-a5aa38a03379">
+              <wsu:Created>2015-07-01T01:11:01Z</wsu:Created>
+              <wsu:Expires>2015-07-01T01:16:01Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-c7acf5a7-a7df-4939-969a-9bd800c63dda">
+              <wsse:Username>admin</wsse:Username>
+              <wsse:Nonce>w3dB+OSQC44jalnjS0yYBQ==</wsse:Nonce>
+              <wsu:Created>2015-07-01T01:11:01Z</wsu:Created>
+            </wsse:UsernameToken>
+            <xenc:ReferenceList xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:DataReference URI="#Enc-2dbee3e6-e77b-4c0f-9e4a-9fbfded9830d" />
+              <xenc:DataReference URI="#Enc-5a0efdfd-2db3-4ca8-aa6f-e3057ceb3e07" />
+            </xenc:ReferenceList>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" />
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1" />
+                <Reference URI="#Id-14995946-f137-4c3a-be99-e75a569e9522">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>PYjChGuNLKQt97ImVKY0EHC4Z44=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-fc2c29b6-bfb4-442c-aa49-328dd35fd1ad">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>3pSC4rNUeLYvmaa9rIuo3xzdNKw=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-730e4f19-16c6-4437-b5e5-8f4d980ba902">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>EuckDxbhC4CigeW/6f65EJpFGbA=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-80597b6c-71dd-4de0-a9f1-36af7d0b6f95">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>N+XvXZdW49sg6u+JHNxeG4H2ViU=</DigestValue>
+                </Reference>
+                <Reference URI="#Timestamp-003122c5-3afc-4079-8ca6-a5aa38a03379">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>zMEzIdBoBjmH2wdIF+YO/5PoR7A=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-4e6ba7ba-9359-4ad4-b4bc-6e5db454a6d9">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>7anIXS9se9vi5+zoWeWdmwlc580=</DigestValue>
+                </Reference>
+              </SignedInfo>
+              <SignatureValue>7ibIFOPn9PgG6A09hIETV/3AVXo=</SignatureValue>
+              <KeyInfo>
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-c7acf5a7-a7df-4939-969a-9bd800c63dda" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+            </Signature>
+          </wsse:Security>
+        </soap:Header>
+        <soap:Body wsu:Id="Id-4e6ba7ba-9359-4ad4-b4bc-6e5db454a6d9">
+          <xenc:EncryptedData Id="Enc-5a0efdfd-2db3-4ca8-aa6f-e3057ceb3e07" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+            <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <wsse:SecurityTokenReference>
+                <wsse:Reference URI="#SecurityToken-c7acf5a7-a7df-4939-969a-9bd800c63dda" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+              </wsse:SecurityTokenReference>
+            </KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>Gx3Ms1EUydYy2XUkZWqqKv9G8Qzlh+RLHOaicEIB66xUYRwJ1t4RQKDqoUjvqy6IrbTb18upXQ9gm3YK+m74CTht0+AG0jjXWrJq7ownc8rNfCtO3MGC/sveDtLcX3/Z1W7bydQo8XZsp3gRP6bijmQODGCwqIqSk8zYUcnChviVNtP3teCI0uPqKJGqgUii</xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </outputMessage>
+  <outputMessage utc="01/07/2015 01:18:26 a.m." messageId="urn:uuid:0e892881-d671-4dfd-bf28-8f23564217e9">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/">
+            <PinCode>1111</PinCode>
+          </BankAccountSettings>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatus xmlns="http://company.com/samples/wse/">
+            <accountNumber>123456</accountNumber>
+          </CheckAccountStatus>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Entering SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Exited SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/" wsu:Id="c69f4fa8-6cf9-4d4d-a54f-1e453527369e">
+            <xenc:EncryptedData Id="Enc-db614dd6-e138-4e53-8b81-f175fb924db3" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-51af53fa-754c-4f9d-b8e7-0b81dc70f590" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+              <xenc:CipherData>
+                <xenc:CipherValue>iVJMxoDQfMIXPd3G3OKcI1QNNVkIxuCi2W4DBVjEdQt5Ykkicc/STTCSHvInLpjwU6DgqGRoTWDqhrN3to0XB8ZyNWKFr2iovQ/pDZ7xQs4=</xenc:CipherValue>
+              </xenc:CipherData>
+            </xenc:EncryptedData>
+          </BankAccountSettings>
+          <wsa:Action wsu:Id="Id-96261889-7829-4690-94fa-a24f7ac7b9ed">http://company.com/samples/wse/CheckAccountStatus</wsa:Action>
+          <wsa:MessageID wsu:Id="Id-dbcebfe0-eb23-4b63-8a48-8c5fffcba537">urn:uuid:0e892881-d671-4dfd-bf28-8f23564217e9</wsa:MessageID>
+          <wsa:ReplyTo wsu:Id="Id-24aa5c5a-97a9-445e-b2ee-a328f1a8547f">
+            <wsa:Address>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:Address>
+          </wsa:ReplyTo>
+          <wsa:To wsu:Id="Id-4d463909-8849-45ee-add5-cf5d2e9743bf">http://localhost:2045/UsernameAssertionService/Service.asmx</wsa:To>
+          <wsse:Security soap:mustUnderstand="1">
+            <wsu:Timestamp wsu:Id="Timestamp-c9700b1d-afdb-40a6-b20a-2cf93c0e019c">
+              <wsu:Created>2015-07-01T01:18:25Z</wsu:Created>
+              <wsu:Expires>2015-07-01T01:23:25Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-51af53fa-754c-4f9d-b8e7-0b81dc70f590">
+              <wsse:Username>admin</wsse:Username>
+              <wsse:Nonce>x8iHBTfBKAxIJxFqRIlfgA==</wsse:Nonce>
+              <wsu:Created>2015-07-01T01:18:25Z</wsu:Created>
+            </wsse:UsernameToken>
+            <xenc:ReferenceList xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:DataReference URI="#Enc-db614dd6-e138-4e53-8b81-f175fb924db3" />
+              <xenc:DataReference URI="#Enc-8ec8798a-45c0-4e84-8620-665d3f60f315" />
+            </xenc:ReferenceList>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" />
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1" />
+                <Reference URI="#Id-96261889-7829-4690-94fa-a24f7ac7b9ed">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>wSaw68J+oY/urX4gRrHUorZnZFk=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-dbcebfe0-eb23-4b63-8a48-8c5fffcba537">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>Ry+h4QT8LOrqS9KMpZdFoaEPOrs=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-24aa5c5a-97a9-445e-b2ee-a328f1a8547f">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>Y9iO7ibn4/70D6nlZaHe40Bi3IA=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-4d463909-8849-45ee-add5-cf5d2e9743bf">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>VNkLdeZohd5xDBikLuwvCtl1MUI=</DigestValue>
+                </Reference>
+                <Reference URI="#Timestamp-c9700b1d-afdb-40a6-b20a-2cf93c0e019c">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>CRm9yAGgq9EOVnWJxrD3J4PaGbM=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-0dc56bca-e2bb-4aa3-b0f9-32e0a1451bc6">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>wJC7JZTY6xuJFH3zqFVTGCqBqLI=</DigestValue>
+                </Reference>
+              </SignedInfo>
+              <SignatureValue>SFzIuiDt4fa5suXnFgd7PnilWx0=</SignatureValue>
+              <KeyInfo>
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-51af53fa-754c-4f9d-b8e7-0b81dc70f590" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+            </Signature>
+          </wsse:Security>
+        </soap:Header>
+        <soap:Body wsu:Id="Id-0dc56bca-e2bb-4aa3-b0f9-32e0a1451bc6">
+          <xenc:EncryptedData Id="Enc-8ec8798a-45c0-4e84-8620-665d3f60f315" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+            <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <wsse:SecurityTokenReference>
+                <wsse:Reference URI="#SecurityToken-51af53fa-754c-4f9d-b8e7-0b81dc70f590" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+              </wsse:SecurityTokenReference>
+            </KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>vSs7jNAIQ6e/tSRA8sGKLMnEkwC0LSxLZmmZNZY1eMaES2R5BC4Gofy+BBMOqmpfGa5kj4DASnvEzu+qiVwg7bAWIXY8rGNoZWnWZWw04lQlTItrysJusDtsk9kyMfR5a6YdKornliKMX2zO0Q6Pf9F7SMsoChZkPgKMNv5D7mVqc+sfWMQmJavPai0L9XoD</xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </outputMessage>
+  <outputMessage utc="01/07/2015 01:20:55 a.m." messageId="urn:uuid:7041e034-5735-43e9-967e-01525b9bd455">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/">
+            <PinCode>11112</PinCode>
+          </BankAccountSettings>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatus xmlns="http://company.com/samples/wse/">
+            <accountNumber>123456</accountNumber>
+          </CheckAccountStatus>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Entering SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Exited SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/" wsu:Id="6475f922-b1be-471e-9391-dd112b80b349">
+            <xenc:EncryptedData Id="Enc-808ee665-dded-4eb7-b573-92becc4e3ca8" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-8af276c1-bc8d-4fef-8f2f-683a8ae8515d" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+              <xenc:CipherData>
+                <xenc:CipherValue>L0i2QnDYlcXyyo/0mKBirYhPAha2ylSvVLzEsutgI0+yfMMpOzEaDEgMNIhrwfD7pXGmcO07tzpdvKoPbFblCmJkl7IHtakkQG0+0T0V99X4eMuqND1oSYTyCM5KpsAI</xenc:CipherValue>
+              </xenc:CipherData>
+            </xenc:EncryptedData>
+          </BankAccountSettings>
+          <wsa:Action wsu:Id="Id-43739066-3daf-44fd-9de4-6547b833bcfa">http://company.com/samples/wse/CheckAccountStatus</wsa:Action>
+          <wsa:MessageID wsu:Id="Id-b8eb29ec-d8d9-4ca7-9c12-be7764ba599e">urn:uuid:7041e034-5735-43e9-967e-01525b9bd455</wsa:MessageID>
+          <wsa:ReplyTo wsu:Id="Id-43a9bfac-9c3f-432a-80dc-760c79d38126">
+            <wsa:Address>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:Address>
+          </wsa:ReplyTo>
+          <wsa:To wsu:Id="Id-1381dba6-3439-4d78-8946-8ecea001d56d">http://localhost:2045/UsernameAssertionService/Service.asmx</wsa:To>
+          <wsse:Security soap:mustUnderstand="1">
+            <wsu:Timestamp wsu:Id="Timestamp-755ac559-5688-4581-9ca3-168154592fde">
+              <wsu:Created>2015-07-01T01:20:55Z</wsu:Created>
+              <wsu:Expires>2015-07-01T01:25:55Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-8af276c1-bc8d-4fef-8f2f-683a8ae8515d">
+              <wsse:Username>admin</wsse:Username>
+              <wsse:Nonce>g20XCQnoZP/xVlubIhuxWA==</wsse:Nonce>
+              <wsu:Created>2015-07-01T01:20:55Z</wsu:Created>
+            </wsse:UsernameToken>
+            <xenc:ReferenceList xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:DataReference URI="#Enc-808ee665-dded-4eb7-b573-92becc4e3ca8" />
+              <xenc:DataReference URI="#Enc-33e7dc6e-7832-45c8-a8a9-a67f0baa2ae0" />
+            </xenc:ReferenceList>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" />
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1" />
+                <Reference URI="#Id-43739066-3daf-44fd-9de4-6547b833bcfa">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>O3txC6ihMgx3fXW2ys0FcrJhFbg=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-b8eb29ec-d8d9-4ca7-9c12-be7764ba599e">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>I1cWmv3EJHjo68CaRico0UUHdhc=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-43a9bfac-9c3f-432a-80dc-760c79d38126">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>6jfFjUFtlROXAOJQ4HxOhLiSxdY=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-1381dba6-3439-4d78-8946-8ecea001d56d">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>NCNIr1jDUSJVPqNiOZer/AXd2rY=</DigestValue>
+                </Reference>
+                <Reference URI="#Timestamp-755ac559-5688-4581-9ca3-168154592fde">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>DrNQqoG1DaFZlWDKxWMIScmA5c8=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-19d337ab-6a3f-4701-b87c-5824003a8d31">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>F22ygqMEexCZKpHYkGFo/E9xt4I=</DigestValue>
+                </Reference>
+              </SignedInfo>
+              <SignatureValue>uuKa7U0gf1wDALN44K87Qa5zPxQ=</SignatureValue>
+              <KeyInfo>
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-8af276c1-bc8d-4fef-8f2f-683a8ae8515d" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+            </Signature>
+          </wsse:Security>
+        </soap:Header>
+        <soap:Body wsu:Id="Id-19d337ab-6a3f-4701-b87c-5824003a8d31">
+          <xenc:EncryptedData Id="Enc-33e7dc6e-7832-45c8-a8a9-a67f0baa2ae0" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+            <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <wsse:SecurityTokenReference>
+                <wsse:Reference URI="#SecurityToken-8af276c1-bc8d-4fef-8f2f-683a8ae8515d" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+              </wsse:SecurityTokenReference>
+            </KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>38BEoXaDq1i1EcsI2py+EG3qQrunZSo3NchAUtdN/rPb3iykKjx8ecN2Hp2wMv6nFUm67os6qjWxOJZDfgBC54Kn9W8V+2evN+ZrKjNez3G7KLZDvkYhxKuEMFqn3HOiuy0H/53TRhGr5I25TwGG4XzoO9pQ+j+65+qy0Zw+apxyGR+5abc0lZ7HcA+ScffF</xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </outputMessage>
+  <outputMessage utc="01/07/2015 01:21:26 a.m." messageId="urn:uuid:980d4f6c-c630-41ce-8e39-00f477f9d780">
+    <processingStep description="Unprocessed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/">
+            <PinCode>1111</PinCode>
+          </BankAccountSettings>
+        </soap:Header>
+        <soap:Body>
+          <CheckAccountStatus xmlns="http://company.com/samples/wse/">
+            <accountNumber>123456</accountNumber>
+          </CheckAccountStatus>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+    <processingStep description="Entering SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Exited SOAP filter UsernameAssertionLibrary.UsernameClientAssertion+ClientOutputFilter" />
+    <processingStep description="Processed message">
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <soap:Header>
+          <BankAccountSettings SecureHeader="false" xmlns="http://company.com/samples/wse/" wsu:Id="c442d571-63d5-4963-9569-5c56971f7c05">
+            <xenc:EncryptedData Id="Enc-db3aabe9-4b70-408c-bbd2-ac08ca98f02b" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-2cac6ed9-0df9-4c91-a353-bf2652c906e2" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+              <xenc:CipherData>
+                <xenc:CipherValue>ONGn0gRuOfOzS5dkF5vbNYbeX9jmshacqBtYprzEEJaJpYkAJHzHub2wgFoOYDo6y1hwrUlHziUoVhnHkBCwwchwmRLgVdxJpzcouqCY4c4=</xenc:CipherValue>
+              </xenc:CipherData>
+            </xenc:EncryptedData>
+          </BankAccountSettings>
+          <wsa:Action wsu:Id="Id-1446e39a-8576-4735-a4be-ed6c801486bf">http://company.com/samples/wse/CheckAccountStatus</wsa:Action>
+          <wsa:MessageID wsu:Id="Id-fd4eaee8-b258-4cde-ba1d-c9cf4b2efabe">urn:uuid:980d4f6c-c630-41ce-8e39-00f477f9d780</wsa:MessageID>
+          <wsa:ReplyTo wsu:Id="Id-55e338cf-2861-4915-9a83-604fb0e3abf0">
+            <wsa:Address>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:Address>
+          </wsa:ReplyTo>
+          <wsa:To wsu:Id="Id-800d8ff1-26e8-4ba4-a754-324ac426b043">http://localhost:2045/UsernameAssertionService/Service.asmx</wsa:To>
+          <wsse:Security soap:mustUnderstand="1">
+            <wsu:Timestamp wsu:Id="Timestamp-72af9552-e3e8-4a0b-b1bd-cf14e9545db8">
+              <wsu:Created>2015-07-01T01:21:25Z</wsu:Created>
+              <wsu:Expires>2015-07-01T01:26:25Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-2cac6ed9-0df9-4c91-a353-bf2652c906e2">
+              <wsse:Username>admin</wsse:Username>
+              <wsse:Nonce>c/fVg8xMABRJe4FS0bMp4A==</wsse:Nonce>
+              <wsu:Created>2015-07-01T01:21:25Z</wsu:Created>
+            </wsse:UsernameToken>
+            <xenc:ReferenceList xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+              <xenc:DataReference URI="#Enc-db3aabe9-4b70-408c-bbd2-ac08ca98f02b" />
+              <xenc:DataReference URI="#Enc-6307f9dc-0f32-4ef2-b89a-97c2df2797af" />
+            </xenc:ReferenceList>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <SignedInfo>
+                <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" />
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1" />
+                <Reference URI="#Id-1446e39a-8576-4735-a4be-ed6c801486bf">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>wxXlnNFoLXcf2spu411L29DPs24=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-fd4eaee8-b258-4cde-ba1d-c9cf4b2efabe">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>f9GvmyWQxu6cW5B91EakrkkZCcw=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-55e338cf-2861-4915-9a83-604fb0e3abf0">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>obxOOQhMTEZjTLtt/lepZ+C7S5w=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-800d8ff1-26e8-4ba4-a754-324ac426b043">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>b9ZRftZTBZctAoNRzrPtT1F+4ws=</DigestValue>
+                </Reference>
+                <Reference URI="#Timestamp-72af9552-e3e8-4a0b-b1bd-cf14e9545db8">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>I9nZYsKlXSaZEDgj0QU7WHpDYnc=</DigestValue>
+                </Reference>
+                <Reference URI="#Id-d4b804a6-fed4-4879-8318-11297f5aa766">
+                  <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </Transforms>
+                  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <DigestValue>s7xHdV9bYHIw4hZf3uuWCYc4VE8=</DigestValue>
+                </Reference>
+              </SignedInfo>
+              <SignatureValue>XhUjAjfw4nMXkB47Bub3K2LISX8=</SignatureValue>
+              <KeyInfo>
+                <wsse:SecurityTokenReference>
+                  <wsse:Reference URI="#SecurityToken-2cac6ed9-0df9-4c91-a353-bf2652c906e2" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+                </wsse:SecurityTokenReference>
+              </KeyInfo>
+            </Signature>
+          </wsse:Security>
+        </soap:Header>
+        <soap:Body wsu:Id="Id-d4b804a6-fed4-4879-8318-11297f5aa766">
+          <xenc:EncryptedData Id="Enc-6307f9dc-0f32-4ef2-b89a-97c2df2797af" Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+            <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <wsse:SecurityTokenReference>
+                <wsse:Reference URI="#SecurityToken-2cac6ed9-0df9-4c91-a353-bf2652c906e2" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" />
+              </wsse:SecurityTokenReference>
+            </KeyInfo>
+            <xenc:CipherData>
+              <xenc:CipherValue>AeRuW7WI1Yv5drnIMtE0sKI1b7xCQKY8a4qSFzOAbqU99BfVAQ0VxCU+EMZjr9Uh4dBIc9XOhO/rcfRNS+27XFw+2An8dLB50a6cYAoQhjQ3XYfyYujRU0IFN3fsM2T1K2mvWIPbAVDMqGEgE8kFmc9EcxgTacteK9NszFukwzbZF0lDV15rgUvgYM1kV0+f</xenc:CipherValue>
+            </xenc:CipherData>
+          </xenc:EncryptedData>
+        </soap:Body>
+      </soap:Envelope>
+    </processingStep>
+  </outputMessage>
+</log>
